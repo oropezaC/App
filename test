@@ -1,0 +1,48 @@
+<!-- <div id="app" class="col-md-3">
+<h1>{{ greeting }}</h1>
+<input type="text" v-model="greeting" class="form-control">
+<button type="button" class="btn btn-info btn-xs">
+<span class="glyphicon glyphicon-plus"></span>
+</button>
+</div> -->
+
+<!-- <div id="app1">
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<ul class="list-group">
+<li v-for="film in films | orderBy 'id'" class="list-group-item film" v-bind:class="{'seen' : film.seen}">
+<button class="label label-danger" v-on:click="changeEstatus(film)" >
+Cambiar
+</button>
+<span>{{film.title }}</span>---<span>Director: {{film.dir}}</span>
+</li>
+</ul>
+</div>
+</div>
+</div> -->
+
+
+--------------------------------------------
+
+
+  // new Vue({
+  //   el: '#app1',
+  //   data: {
+  //     films: [
+  //       {id: 4, name: 'The Phantom Menace', seen: false},
+  //       {id: 5, name: 'Attack of the Clones', seen: true},
+  //       {id: 6, name: 'Revenge of the Sith', seen: false},
+  //       {id: 1, name: 'A New Hope', seen: true},
+  //       {id: 2, name: 'The Empire Strikes Back', seen: true},
+  //       {id: 3, name: 'Return of the Jedi', seen: true},
+  //       {id: 7, name: 'The Force Awakens', seen: false}
+  //     ]
+  //   },
+  //   created: function () {
+  //     console.log('component created!');
+  //   }, methods: {
+  //     changeEstatus: function (film) {
+  //       film.seen = !film.seen
+  //     }
+  //   }
+  // })

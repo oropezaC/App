@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/superhero/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Star Wars</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <hr>
+    <div id="movies">
+      <div class="col-md-4" v-for="film in films">
+        <film-card  v-bind:title="film.title" v-bind:opening="film.opening" v-bind:seen="film.seen"> </film-card>
+      </div>
+      <template id="filmCard">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title" style="font-weight:bold">{{* title }}</h3>
+          </div>
+          <div class="panel-body" v-bind:class="{'out': seen}">
+            {{* opening }}
+          </div>
+          <button class="btn btn-block" v-bind:class="{'btn-danger': seen, 'btn-success': !seen}" v-on:click="changeSeen">
+          {{ seenText }}
+        </button>
+      </div>
+    </template>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.2/vue-resource.min.js"></script>
+<script src="../app.js"></script>
+</body>
+</html>
