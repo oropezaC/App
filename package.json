@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "live-server ."
+    "server": "live-server .",
+    "bundle": "browserify scripts/main.js -o bundle.js --debug"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browserify": "^14.4.0",
     "live-server": "^1.2.0"
+  },
+  "dependencies": {
+    "vue-resource": "^1.3.4"
   }
 }
